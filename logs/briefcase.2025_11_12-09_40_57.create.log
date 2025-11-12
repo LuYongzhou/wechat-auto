@@ -1,0 +1,707 @@
+Date/Time:       2025-11-12 09:40:57 
+Command line:    E:\wechatauto\.venv\Scripts\briefcase create android
+
+OS Release:      Windows 10
+OS Version:      10.0.19045
+Architecture:    AMD64
+Platform:        Windows-10-10.0.19045-SP0
+
+Python exe:      E:\wechatauto\.venv\Scripts\python.exe
+Python version:  3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.3.24
+Target platform: android
+Target format:   gradle
+
+Environment Variables:
+	ALLUSERSPROFILE=C:\ProgramData
+	APPDATA=C:\Users\LU\AppData\Roaming
+	BT_PANEL=D:\BtSoft\panel
+	BT_PYTHON=C:\Program Files\python
+	BT_SETUP=D:\BtSoft
+	CATALINA_HOME=D:\tomcat\apache-tomcat-8.5.82
+	CLASSPATH=C:\Program Files\Java\jdk-17.0.10\lib\dt.jar;C:\Program Files\Java\jdk-17.0.10\lib\tools.jar
+	COMMONPROGRAMFILES=C:\Program Files\Common Files
+	COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+	COMMONPROGRAMW6432=C:\Program Files\Common Files
+	COMPUTERNAME=L15035799925
+	COMSPEC=C:\Windows\system32\cmd.exe
+	DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+	FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+	FPS_BROWSER_USER_PROFILE_STRING=Default
+	HOMEDRIVE=C:
+	HOMEPATH=\Users\LU
+	JAVA_HOME=C:\Program Files\Java\jdk-17.0.10
+	JETBRAINS_INTELLIJ_COMMAND_END_MARKER=oFOotNp4Vbtb85nZZJ21fgSpYLCwrIfIjKDX4fLDeVlXHvr1dr7GrzpCVWgxJpQ3
+	LOCALAPPDATA=C:\Users\LU\AppData\Local
+	LOGONSERVER=\\L15035799925
+	MAVEN_HOME=D:\maven\apache-maven-3.5.4
+	MAVEN_SECOND=D:\maven\apache-maven-3.6.3
+	NODE_PATH=D:\nodeJs\node_modules
+	NUMBER_OF_PROCESSORS=8
+	ONEDRIVE=C:\Users\LU\OneDrive
+	OS=Windows_NT
+	PATH=E:\wechatauto\.venv/Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;D:\oracle\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-17.0.10\bin;C:\Program Files\Java\jdk-17.0.10\jre\bin;D:\Xshell\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\python;C:\Program Files\python\Scripts;D:\BtSoft\panel\script;D:\tomcat\apache-tomcat-8.5.82\bin;D:\nodeJs\node_global;C:\Program Files\Git\cmd;D:\maven\apache-maven-3.5.4\bin;E:\微信小程序\普通小程序开发\微信web开发者工具\dll;E:\微信小程序\游戏小程序开发\微信web开发者工具\dll;D:\nodeJs\;C:\Program Files (x86)\dotnet\;D:\maven\apache-maven-3.6.3\bin;C:\Program Files\dotnet\;C:\Users\LU\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\LU\AppData\Local\Programs\Python\Python39\;C:\Users\LU\AppData\Local\Microsoft\WindowsApps;D:\nodeJs;;D:\vsCode\Microsoft VS Code\bin;E:\fiddler;C:\Users\LU\AppData\Roaming\npm
+	PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+	POSTMAN_DISABLE_GPU=true
+	PROCESSOR_ARCHITECTURE=AMD64
+	PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+	PROCESSOR_LEVEL=6
+	PROCESSOR_REVISION=8c01
+	PROGRAMDATA=C:\ProgramData
+	PROGRAMFILES=C:\Program Files
+	PROGRAMFILES(X86)=C:\Program Files (x86)
+	PROGRAMW6432=C:\Program Files
+	PSEXECUTIONPOLICYPREFERENCE=Bypass
+	PSMODULEPATH=C:\Users\LU\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+	PUBLIC=C:\Users\Public
+	SESSIONNAME=Console
+	SYSTEMDRIVE=C:
+	SYSTEMROOT=C:\Windows
+	TEMP=C:\Users\LU\AppData\Local\Temp
+	TERMINAL_EMULATOR=JetBrains-JediTerm
+	TERM_SESSION_ID=45601338-7f5a-447e-a506-34a7cbec16e2
+	TMP=C:\Users\LU\AppData\Local\Temp
+	UNRAR_LIB_PATH=C:\Program Files\python\Lib\site-packages\unrar\UnRAR.dll
+	USERDOMAIN=L15035799925
+	USERDOMAIN_ROAMINGPROFILE=L15035799925
+	USERNAME=LU
+	USERPROFILE=C:\Users\LU
+	VIRTUAL_ENV=E:\wechatauto\.venv
+	VIRTUAL_ENV_PROMPT=.venv
+	WINDIR=C:\Windows
+	ZES_ENABLE_SYSMAN=1
+
+pyproject.toml:
+# pyproject.toml
+[build-system]
+requires = [
+    "briefcase",
+    "toga-android",
+]
+build-backend = "briefcase.backends"
+
+[tool.briefcase]
+project_name = "WeChat Auto"
+bundle = "com.yourname.wechatauto"
+version = "1.0.0"
+url = "https://example.com"
+license = "BSD license"
+author = "Your Name"
+author_email = "your@email.com"
+
+[tool.briefcase.app.wechatauto]
+formal_name = "WeChat Auto"
+description = "微信自动化助手"
+sources = ["src/wechatauto"]
+requires = [
+    "toga",
+    "android",
+]
+
+[tool.briefcase.app.wechatauto.android]
+permissions = [
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.READ_EXTERNAL_STORAGE",
+]
+
+Briefcase Log:
+[09:40:36]                                                                                                                                                               base.py:302
+           *************************************************************************                                                                                     base.py:302
+           ** WARNING: Your Python version is unsupported!                        **                                                                                     base.py:302
+           *************************************************************************                                                                                     base.py:302
+                                                                                                                                                                         base.py:302
+               The version of Python you are using (3.9.13) is past its                                                                                                  base.py:302
+               end of life. As a result, it is highly likely your Briefcase                                                                                              base.py:302
+               version is also out of date.                                                                                                                              base.py:302
+                                                                                                                                                                         base.py:302
+               See https://devguide.python.org/versions/ for details on currently                                                                                        base.py:302
+               supported Python versions.                                                                                                                                base.py:302
+                                                                                                                                                                         base.py:302
+           *************************************************************************                                                                                     base.py:302
+                                                                                                                                                                       config.py:666
+           *************************************************************************                                                                                   config.py:666
+           ** WARNING: License Definition for the Project is Deprecated           **                                                                                   config.py:666
+           *************************************************************************                                                                                   config.py:666
+                                                                                                                                                                       config.py:666
+               Briefcase now uses PEP 621 format for license definitions.                                                                                              config.py:666
+                                                                                                                                                                       config.py:666
+               Previously, the name of the license was assigned to the 'license'                                                                                       config.py:666
+               field in pyproject.toml. For PEP 621, the name of the license is                                                                                        config.py:666
+               assigned to 'license.text' or the name of the file containing the                                                                                       config.py:666
+               license is assigned to 'license.file'.                                                                                                                  config.py:666
+                                                                                                                                                                       config.py:666
+               The current configuration for the Project has a 'license' field                                                                                         config.py:666
+               that is specified as a string:                                                                                                                          config.py:666
+                                                                                                                                                                       config.py:666
+                   license = "BSD license"                                                                                                                             config.py:666
+                                                                                                                                                                       config.py:666
+               To use the PEP 621 format (and to remove this warning), specify that                                                                                    config.py:666
+               the LICENSE file contains the license for the Project:                                                                                                  config.py:666
+                                                                                                                                                                       config.py:666
+                   license.file = "LICENSE"                                                                                                                            config.py:666
+                                                                                                                                                                       config.py:666
+           *************************************************************************                                                                                   config.py:666
+                                                                                                                                                                         java.py:111
+           [Java JDK] Evaluating JAVA_HOME...                                                                                                                            java.py:111
+           JAVA_HOME=C:\Program Files\Java\jdk-17.0.10                                                                                                                   java.py:112
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     'C:\Program Files\Java\jdk-17.0.10\bin\javac' -version                                                                                          subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     E:\wechatauto                                                                                                                                   subprocess.py:838
+           >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     javac 17.0.10                                                                                                                                   subprocess.py:838
+           >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+           Using JDK at C:\Program Files\Java\jdk-17.0.10                                                                                                                java.py:259
+                                                                                                                                                                  android_sdk.py:361
+           [android_sdk] The Android SDK was not found; downloading and installing...                                                                             android_sdk.py:361
+           To use an existing Android SDK instance, specify its root directory path in the ANDROID_HOME environment variable.                                     android_sdk.py:365
+                                                                                                                                                                  android_sdk.py:369
+[09:40:57]                                                                                                                                                            __main__.py:42
+           Unable to download Android SDK Command-Line Tools; is your computer offline?                                                                               __main__.py:43
+                                                                                                                                                                      __main__.py:43
+           The reported cause of the problem was timed out                                                                                                            __main__.py:43
+           Saving log... started                                                                                                                                      console.py:433
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_transports\default.py:101 in map_httpcore_exceptions                                                                                │
+│                                                                                                                                                                                  │
+│    98 │   if len(HTTPCORE_EXC_MAP) == 0:                                                       ╭─────── locals ────────╮                                                         │
+│    99 │   │   HTTPCORE_EXC_MAP = _load_httpcore_exceptions()                                   │ message = 'timed out' │                                                         │
+│   100 │   try:                                                                                 ╰───────────────────────╯                                                         │
+│ ❱ 101 │   │   yield                                                                                                                                                              │
+│   102 │   except Exception as exc:                                                                                                                                               │
+│   103 │   │   mapped_exc = None                                                                                                                                                  │
+│   104                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_transports\default.py:250 in handle_request                                                                                         │
+│                                                                                                                                                                                  │
+│   247 │   │   │   extensions=request.extensions,                                                                                                                                 │
+│   248 │   │   )                                                                                                                                                                  │
+│   249 │   │   with map_httpcore_exceptions():                                                                                                                                    │
+│ ❱ 250 │   │   │   resp = self._pool.handle_request(req)                                                                                                                          │
+│   251 │   │                                                                                                                                                                      │
+│   252 │   │   assert isinstance(resp.stream, typing.Iterable)                                                                                                                    │
+│   253                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────╮                                                             │
+│ │ httpcore = <module 'httpcore' from 'E:\\wechatauto\\.venv\\lib\\site-packages\\httpcore\\__init__.py'>           │                                                             │
+│ │      req = <Request [b'GET']>                                                                                    │                                                             │
+│ │  request = <Request('GET', 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip')> │                                                             │
+│ │     self = <httpx.HTTPTransport object at 0x0000026646D90CA0>                                                    │                                                             │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                             │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpcore\_sync\connection_pool.py:256 in handle_request                                                                                    │
+│                                                                                                                                                                                  │
+│   253 │   │   │   │   closing = self._assign_requests_to_connections()                                                                                                           │
+│   254 │   │   │                                                                                                                                                                  │
+│   255 │   │   │   self._close_connections(closing)                                                                                                                               │
+│ ❱ 256 │   │   │   raise exc from None                                                                                                                                            │
+│   257 │   │                                                                                                                                                                      │
+│   258 │   │   # Return the response. Note that in this case we still have to manage                                                                                              │
+│   259 │   │   # the point at which the response is closed.                                                                                                                       │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────── locals ────────────────────────────────────────────╮                                                                               │
+│ │      closing = []                                                                              │                                                                               │
+│ │   connection = <HTTPConnection [CONNECTION FAILED]>                                            │                                                                               │
+│ │ pool_request = <httpcore._sync.connection_pool.PoolRequest object at 0x0000026647069460>       │                                                                               │
+│ │      request = <Request [b'GET']>                                                              │                                                                               │
+│ │       scheme = 'https'                                                                         │                                                                               │
+│ │         self = <ConnectionPool [Requests: 0 active, 0 queued | Connections: 0 active, 0 idle]> │                                                                               │
+│ │      timeout = 5.0                                                                             │                                                                               │
+│ │     timeouts = {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}                        │                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                               │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpcore\_sync\connection_pool.py:236 in handle_request                                                                                    │
+│                                                                                                                                                                                  │
+│   233 │   │   │   │                                                                                                                                                              │
+│   234 │   │   │   │   try:                                                                                                                                                       │
+│   235 │   │   │   │   │   # Send the request on the assigned connection.                                                                                                         │
+│ ❱ 236 │   │   │   │   │   response = connection.handle_request(                                                                                                                  │
+│   237 │   │   │   │   │   │   pool_request.request                                                                                                                               │
+│   238 │   │   │   │   │   )                                                                                                                                                      │
+│   239 │   │   │   │   except ConnectionNotAvailable:                                                                                                                             │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────── locals ────────────────────────────────────────────╮                                                                               │
+│ │      closing = []                                                                              │                                                                               │
+│ │   connection = <HTTPConnection [CONNECTION FAILED]>                                            │                                                                               │
+│ │ pool_request = <httpcore._sync.connection_pool.PoolRequest object at 0x0000026647069460>       │                                                                               │
+│ │      request = <Request [b'GET']>                                                              │                                                                               │
+│ │       scheme = 'https'                                                                         │                                                                               │
+│ │         self = <ConnectionPool [Requests: 0 active, 0 queued | Connections: 0 active, 0 idle]> │                                                                               │
+│ │      timeout = 5.0                                                                             │                                                                               │
+│ │     timeouts = {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}                        │                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                               │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpcore\_sync\connection.py:101 in handle_request                                                                                         │
+│                                                                                                                                                                                  │
+│    98 │   │   │   │   │   │   )                                                                ╭──────────────────── locals ────────────────────╮                                │
+│    99 │   │   except BaseException as exc:                                                     │ request = <Request [b'GET']>                   │                                │
+│   100 │   │   │   self._connect_failed = True                                                  │    self = <HTTPConnection [CONNECTION FAILED]> │                                │
+│ ❱ 101 │   │   │   raise exc                                                                    ╰────────────────────────────────────────────────╯                                │
+│   102 │   │                                                                                                                                                                      │
+│   103 │   │   return self._connection.handle_request(request)                                                                                                                    │
+│   104                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpcore\_sync\connection.py:78 in handle_request                                                                                          │
+│                                                                                                                                                                                  │
+│    75 │   │   try:                                                                             ╭──────────────────── locals ────────────────────╮                                │
+│    76 │   │   │   with self._request_lock:                                                     │ request = <Request [b'GET']>                   │                                │
+│    77 │   │   │   │   if self._connection is None:                                             │    self = <HTTPConnection [CONNECTION FAILED]> │                                │
+│ ❱  78 │   │   │   │   │   stream = self._connect(request)                                      ╰────────────────────────────────────────────────╯                                │
+│    79 │   │   │   │   │                                                                                                                                                          │
+│    80 │   │   │   │   │   ssl_object = stream.get_extra_info("ssl_object")                                                                                                       │
+│    81 │   │   │   │   │   http2_negotiated = (                                                                                                                                   │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpcore\_sync\connection.py:124 in _connect                                                                                               │
+│                                                                                                                                                                                  │
+│   121 │   │   │   │   │   │   "socket_options": self._socket_options,                                                                                                            │
+│   122 │   │   │   │   │   }                                                                                                                                                      │
+│   123 │   │   │   │   │   with Trace("connect_tcp", logger, request, kwargs) as trace:                                                                                           │
+│ ❱ 124 │   │   │   │   │   │   stream = self._network_backend.connect_tcp(**kwargs)                                                                                               │
+│   125 │   │   │   │   │   │   trace.return_value = stream                                                                                                                        │
+│   126 │   │   │   │   else:                                                                                                                                                      │
+│   127 │   │   │   │   │   kwargs = {                                                                                                                                             │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────╮                                                         │
+│ │       delays = <generator object exponential_backoff at 0x000002664705F580>                                          │                                                         │
+│ │       kwargs = {'host': 'dl.google.com', 'port': 443, 'local_address': None, 'timeout': 5.0, 'socket_options': None} │                                                         │
+│ │      request = <Request [b'GET']>                                                                                    │                                                         │
+│ │ retries_left = 0                                                                                                     │                                                         │
+│ │         self = <HTTPConnection [CONNECTION FAILED]>                                                                  │                                                         │
+│ │ sni_hostname = None                                                                                                  │                                                         │
+│ │      timeout = 5.0                                                                                                   │                                                         │
+│ │     timeouts = {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}                                              │                                                         │
+│ │        trace = <httpcore._trace.Trace object at 0x00000266470696A0>                                                  │                                                         │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                         │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpcore\_backends\sync.py:215 in connect_tcp                                                                                              │
+│                                                                                                                                                                                  │
+│   212 │   │   │   )                                                                                                                                                              │
+│   213 │   │   │   for option in socket_options:                                                                                                                                  │
+│   214 │   │   │   │   sock.setsockopt(*option)  # pragma: no cover                                                                                                               │
+│ ❱ 215 │   │   │   sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)                                                                                                     │
+│   216 │   │   return SyncStream(sock)                                                                                                                                            │
+│   217 │                                                                                                                                                                          │
+│   218 │   def connect_unix_socket(                                                                                                                                               │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────────────╮                                           │
+│ │        address = ('dl.google.com', 443)                                                                                            │                                           │
+│ │        exc_map = {<class 'socket.timeout'>: <class 'httpcore.ConnectTimeout'>, <class 'OSError'>: <class 'httpcore.ConnectError'>} │                                           │
+│ │           host = 'dl.google.com'                                                                                                   │                                           │
+│ │  local_address = None                                                                                                              │                                           │
+│ │           port = 443                                                                                                               │                                           │
+│ │           self = <httpcore.SyncBackend object at 0x0000026646D90A90>                                                               │                                           │
+│ │ socket_options = []                                                                                                                │                                           │
+│ │ source_address = None                                                                                                              │                                           │
+│ │        timeout = 5.0                                                                                                               │                                           │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                           │
+│                                                                                                                                                                                  │
+│ C:\Users\LU\AppData\Local\Programs\Python\Python39\lib\contextlib.py:137 in __exit__                                                                                             │
+│                                                                                                                                                                                  │
+│   134 │   │   │   │   # tell if we get the same exception back                                                                                                                   │
+│   135 │   │   │   │   value = typ()                                                                                                                                              │
+│   136 │   │   │   try:                                                                                                                                                           │
+│ ❱ 137 │   │   │   │   self.gen.throw(typ, value, traceback)                                                                                                                      │
+│   138 │   │   │   except StopIteration as exc:                                                                                                                                   │
+│   139 │   │   │   │   # Suppress StopIteration *unless* it's the same exception that                                                                                             │
+│   140 │   │   │   │   # was passed to throw().  This prevents a StopIteration                                                                                                    │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────── locals ────────────────────────────────────╮                                                                                               │
+│ │      self = <contextlib._GeneratorContextManager object at 0x00000266470696D0> │                                                                                               │
+│ │ traceback = <traceback object at 0x000002664706E7C0>                           │                                                                                               │
+│ │     value = timeout('timed out')                                               │                                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────╯                                                                                               │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpcore\_exceptions.py:14 in map_exceptions                                                                                               │
+│                                                                                                                                                                                  │
+│   11 │   except Exception as exc:  # noqa: PIE786                                                                                                                                │
+│   12 │   │   for from_exc, to_exc in map.items():                                                                                                                                │
+│   13 │   │   │   if isinstance(exc, from_exc):                                                                                                                                   │
+│ ❱ 14 │   │   │   │   raise to_exc(exc) from exc                                                                                                                                  │
+│   15 │   │   raise  # pragma: nocover                                                                                                                                            │
+│   16                                                                                                                                                                             │
+│   17                                                                                                                                                                             │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────╮                                                      │
+│ │ map = {<class 'socket.timeout'>: <class 'httpcore.ConnectTimeout'>, <class 'OSError'>: <class 'httpcore.ConnectError'>} │                                                      │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\integrations\file.py:200 in download                                                                                             │
+│                                                                                                                                                                                  │
+│   197 │   │   download_path.mkdir(parents=True, exist_ok=True)                                                                                                                   │
+│   198 │   │   filename: Path = None                                                                                                                                              │
+│   199 │   │   try:                                                                                                                                                               │
+│ ❱ 200 │   │   │   with self.tools.httpx.stream(                                                                                                                                  │
+│   201 │   │   │   │   "GET",                                                                                                                                                     │
+│   202 │   │   │   │   url,                                                                                                                                                       │
+│   203 │   │   │   │   follow_redirects=True,                                                                                                                                     │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────── locals ───────────────────────────────────────────────╮                                                                         │
+│ │   description = 'Android SDK Command-Line Tools'                                                     │                                                                         │
+│ │ download_path = WindowsPath('C:/Users/LU/AppData/Local/BeeWare/briefcase/Cache/tools')               │                                                                         │
+│ │      filename = None                                                                                 │                                                                         │
+│ │          hint = 'is your computer offline?\n\nThe reported cause of the problem was timed out'       │                                                                         │
+│ │          role = 'Android SDK Command-Line Tools'                                                     │                                                                         │
+│ │          self = <briefcase.integrations.file.File object at 0x0000026646ADD9A0>                      │                                                                         │
+│ │           url = 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zi'+1 │                                                                         │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                         │
+│                                                                                                                                                                                  │
+│ C:\Users\LU\AppData\Local\Programs\Python\Python39\lib\contextlib.py:119 in __enter__                                                                                            │
+│                                                                                                                                                                                  │
+│   116 │   │   # they are only needed for recreation, which is not possible anymore             ╭───────────────────────────────── locals ──────────────────────────────────╮     │
+│   117 │   │   del self.args, self.kwds, self.func                                              │ self = <contextlib._GeneratorContextManager object at 0x0000026646D90C70> │     │
+│   118 │   │   try:                                                                             ╰───────────────────────────────────────────────────────────────────────────╯     │
+│ ❱ 119 │   │   │   return next(self.gen)                                                                                                                                          │
+│   120 │   │   except StopIteration:                                                                                                                                              │
+│   121 │   │   │   raise RuntimeError("generator didn't yield") from None                                                                                                         │
+│   122                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_api.py:159 in stream                                                                                                                │
+│                                                                                                                                                                                  │
+│   156 │   │   timeout=timeout,                                                                                                                                                   │
+│   157 │   │   trust_env=trust_env,                                                                                                                                               │
+│   158 │   ) as client:                                                                                                                                                           │
+│ ❱ 159 │   │   with client.stream(                                                                                                                                                │
+│   160 │   │   │   method=method,                                                                                                                                                 │
+│   161 │   │   │   url=url,                                                                                                                                                       │
+│   162 │   │   │   content=content,                                                                                                                                               │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────── locals ─────────────────────────────────────────────────╮                                                                      │
+│ │             auth = None                                                                                 │                                                                      │
+│ │           client = <httpx.Client object at 0x0000026646D906D0>                                          │                                                                      │
+│ │          content = None                                                                                 │                                                                      │
+│ │          cookies = None                                                                                 │                                                                      │
+│ │             data = None                                                                                 │                                                                      │
+│ │            files = None                                                                                 │                                                                      │
+│ │ follow_redirects = True                                                                                 │                                                                      │
+│ │          headers = None                                                                                 │                                                                      │
+│ │             json = None                                                                                 │                                                                      │
+│ │           method = 'GET'                                                                                │                                                                      │
+│ │           params = None                                                                                 │                                                                      │
+│ │            proxy = None                                                                                 │                                                                      │
+│ │          timeout = Timeout(timeout=5.0)                                                                 │                                                                      │
+│ │        trust_env = True                                                                                 │                                                                      │
+│ │              url = 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zi'+1 │                                                                      │
+│ │           verify = True                                                                                 │                                                                      │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                      │
+│                                                                                                                                                                                  │
+│ C:\Users\LU\AppData\Local\Programs\Python\Python39\lib\contextlib.py:119 in __enter__                                                                                            │
+│                                                                                                                                                                                  │
+│   116 │   │   # they are only needed for recreation, which is not possible anymore             ╭───────────────────────────────── locals ──────────────────────────────────╮     │
+│   117 │   │   del self.args, self.kwds, self.func                                              │ self = <contextlib._GeneratorContextManager object at 0x0000026646D90790> │     │
+│   118 │   │   try:                                                                             ╰───────────────────────────────────────────────────────────────────────────╯     │
+│ ❱ 119 │   │   │   return next(self.gen)                                                                                                                                          │
+│   120 │   │   except StopIteration:                                                                                                                                              │
+│   121 │   │   │   raise RuntimeError("generator didn't yield") from None                                                                                                         │
+│   122                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_client.py:868 in stream                                                                                                             │
+│                                                                                                                                                                                  │
+│    865 │   │   │   timeout=timeout,                                                                                                                                              │
+│    866 │   │   │   extensions=extensions,                                                                                                                                        │
+│    867 │   │   )                                                                                                                                                                 │
+│ ❱  868 │   │   response = self.send(                                                                                                                                             │
+│    869 │   │   │   request=request,                                                                                                                                              │
+│    870 │   │   │   auth=auth,                                                                                                                                                    │
+│    871 │   │   │   follow_redirects=follow_redirects,                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────╮                                                     │
+│ │             auth = None                                                                                                  │                                                     │
+│ │          content = None                                                                                                  │                                                     │
+│ │          cookies = None                                                                                                  │                                                     │
+│ │             data = None                                                                                                  │                                                     │
+│ │       extensions = None                                                                                                  │                                                     │
+│ │            files = None                                                                                                  │                                                     │
+│ │ follow_redirects = True                                                                                                  │                                                     │
+│ │          headers = None                                                                                                  │                                                     │
+│ │             json = None                                                                                                  │                                                     │
+│ │           method = 'GET'                                                                                                 │                                                     │
+│ │           params = None                                                                                                  │                                                     │
+│ │          request = <Request('GET', 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip')> │                                                     │
+│ │             self = <httpx.Client object at 0x0000026646D906D0>                                                           │                                                     │
+│ │          timeout = <httpx._client.UseClientDefault object at 0x0000026645F2D460>                                         │                                                     │
+│ │              url = 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zi'+1                  │                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                     │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_client.py:914 in send                                                                                                               │
+│                                                                                                                                                                                  │
+│    911 │   │                                                                                                                                                                     │
+│    912 │   │   auth = self._build_request_auth(request, auth)                                                                                                                    │
+│    913 │   │                                                                                                                                                                     │
+│ ❱  914 │   │   response = self._send_handling_auth(                                                                                                                              │
+│    915 │   │   │   request,                                                                                                                                                      │
+│    916 │   │   │   auth=auth,                                                                                                                                                    │
+│    917 │   │   │   follow_redirects=follow_redirects,                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────╮                                                     │
+│ │             auth = <httpx.Auth object at 0x0000026646D90670>                                                             │                                                     │
+│ │ follow_redirects = True                                                                                                  │                                                     │
+│ │          request = <Request('GET', 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip')> │                                                     │
+│ │             self = <httpx.Client object at 0x0000026646D906D0>                                                           │                                                     │
+│ │           stream = True                                                                                                  │                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                     │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_client.py:942 in _send_handling_auth                                                                                                │
+│                                                                                                                                                                                  │
+│    939 │   │   │   request = next(auth_flow)                                                                                                                                     │
+│    940 │   │   │                                                                                                                                                                 │
+│    941 │   │   │   while True:                                                                                                                                                   │
+│ ❱  942 │   │   │   │   response = self._send_handling_redirects(                                                                                                                 │
+│    943 │   │   │   │   │   request,                                                                                                                                              │
+│    944 │   │   │   │   │   follow_redirects=follow_redirects,                                                                                                                    │
+│    945 │   │   │   │   │   history=history,                                                                                                                                      │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────╮                                                     │
+│ │             auth = <httpx.Auth object at 0x0000026646D90670>                                                             │                                                     │
+│ │        auth_flow = <generator object Auth.sync_auth_flow at 0x000002664705F430>                                          │                                                     │
+│ │ follow_redirects = True                                                                                                  │                                                     │
+│ │          history = []                                                                                                    │                                                     │
+│ │          request = <Request('GET', 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip')> │                                                     │
+│ │             self = <httpx.Client object at 0x0000026646D906D0>                                                           │                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                     │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_client.py:979 in _send_handling_redirects                                                                                           │
+│                                                                                                                                                                                  │
+│    976 │   │   │   for hook in self._event_hooks["request"]:                                                                                                                     │
+│    977 │   │   │   │   hook(request)                                                                                                                                             │
+│    978 │   │   │                                                                                                                                                                 │
+│ ❱  979 │   │   │   response = self._send_single_request(request)                                                                                                                 │
+│    980 │   │   │   try:                                                                                                                                                          │
+│    981 │   │   │   │   for hook in self._event_hooks["response"]:                                                                                                                │
+│    982 │   │   │   │   │   hook(response)                                                                                                                                        │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────╮                                                     │
+│ │ follow_redirects = True                                                                                                  │                                                     │
+│ │          history = []                                                                                                    │                                                     │
+│ │          request = <Request('GET', 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip')> │                                                     │
+│ │             self = <httpx.Client object at 0x0000026646D906D0>                                                           │                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                     │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_client.py:1014 in _send_single_request                                                                                              │
+│                                                                                                                                                                                  │
+│   1011 │   │   │   )                                                                                                                                                             │
+│   1012 │   │                                                                                                                                                                     │
+│   1013 │   │   with request_context(request=request):                                                                                                                            │
+│ ❱ 1014 │   │   │   response = transport.handle_request(request)                                                                                                                  │
+│   1015 │   │                                                                                                                                                                     │
+│   1016 │   │   assert isinstance(response.stream, SyncByteStream)                                                                                                                │
+│   1017                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────╮                                                            │
+│ │   request = <Request('GET', 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip')> │                                                            │
+│ │      self = <httpx.Client object at 0x0000026646D906D0>                                                           │                                                            │
+│ │     start = 1.4422484                                                                                             │                                                            │
+│ │ transport = <httpx.HTTPTransport object at 0x0000026646D90CA0>                                                    │                                                            │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                            │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_transports\default.py:250 in handle_request                                                                                         │
+│                                                                                                                                                                                  │
+│   247 │   │   │   extensions=request.extensions,                                                                                                                                 │
+│   248 │   │   )                                                                                                                                                                  │
+│   249 │   │   with map_httpcore_exceptions():                                                                                                                                    │
+│ ❱ 250 │   │   │   resp = self._pool.handle_request(req)                                                                                                                          │
+│   251 │   │                                                                                                                                                                      │
+│   252 │   │   assert isinstance(resp.stream, typing.Iterable)                                                                                                                    │
+│   253                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────╮                                                             │
+│ │ httpcore = <module 'httpcore' from 'E:\\wechatauto\\.venv\\lib\\site-packages\\httpcore\\__init__.py'>           │                                                             │
+│ │      req = <Request [b'GET']>                                                                                    │                                                             │
+│ │  request = <Request('GET', 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip')> │                                                             │
+│ │     self = <httpx.HTTPTransport object at 0x0000026646D90CA0>                                                    │                                                             │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                             │
+│                                                                                                                                                                                  │
+│ C:\Users\LU\AppData\Local\Programs\Python\Python39\lib\contextlib.py:137 in __exit__                                                                                             │
+│                                                                                                                                                                                  │
+│   134 │   │   │   │   # tell if we get the same exception back                                                                                                                   │
+│   135 │   │   │   │   value = typ()                                                                                                                                              │
+│   136 │   │   │   try:                                                                                                                                                           │
+│ ❱ 137 │   │   │   │   self.gen.throw(typ, value, traceback)                                                                                                                      │
+│   138 │   │   │   except StopIteration as exc:                                                                                                                                   │
+│   139 │   │   │   │   # Suppress StopIteration *unless* it's the same exception that                                                                                             │
+│   140 │   │   │   │   # was passed to throw().  This prevents a StopIteration                                                                                                    │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────── locals ────────────────────────────────────╮                                                                                               │
+│ │      self = <contextlib._GeneratorContextManager object at 0x00000266470693D0> │                                                                                               │
+│ │ traceback = <traceback object at 0x000002664706EA00>                           │                                                                                               │
+│ │     value = ConnectTimeout(timeout('timed out'))                               │                                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────╯                                                                                               │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\httpx\_transports\default.py:118 in map_httpcore_exceptions                                                                                │
+│                                                                                                                                                                                  │
+│   115 │   │   │   raise                                                                        ╭─────── locals ────────╮                                                         │
+│   116 │   │                                                                                    │ message = 'timed out' │                                                         │
+│   117 │   │   message = str(exc)                                                               ╰───────────────────────╯                                                         │
+│ ❱ 118 │   │   raise mapped_exc(message) from exc                                                                                                                                 │
+│   119                                                                                                                                                                            │
+│   120                                                                                                                                                                            │
+│   121 class ResponseStream(SyncByteStream):                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ConnectTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\__main__.py:27 in main                                                                                                           │
+│                                                                                                                                                                                  │
+│   24 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   25 │   │   │   overrides=overrides,                                                                                                                                            │
+│   26 │   │   )                                                                                                                                                                   │
+│ ❱ 27 │   │   command(**options)                                                                                                                                                  │
+│   28 │   except HelpText as e:                                                                                                                                                   │
+│   29 │   │   console.info()                                                                                                                                                      │
+│   30 │   │   console.info(str(e))                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────────────────────────╮                    │
+│ │       command = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x0000026646A9CB80>                                                     │                    │
+│ │       console = <briefcase.console.Console object at 0x000002664318D700>                                                                                  │                    │
+│ │             e = NetworkFailure('download Android SDK Command-Line Tools', 'is your computer offline?\n\nThe reported cause of the problem was timed out') │                    │
+│ │ extra_cmdline = []                                                                                                                                        │                    │
+│ │       options = {}                                                                                                                                        │                    │
+│ │     overrides = {}                                                                                                                                        │                    │
+│ │        result = 200                                                                                                                                       │                    │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                    │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\commands\create.py:1009 in __call__                                                                                              │
+│                                                                                                                                                                                  │
+│   1006 │   ) -> dict | None:                                                                                                                                                     │
+│   1007 │   │   # Confirm host compatibility, that all required tools are available,                                                                                              │
+│   1008 │   │   # and that the app configuration is finalized.                                                                                                                    │
+│ ❱ 1009 │   │   self.finalize(app)                                                                                                                                                │
+│   1010 │   │                                                                                                                                                                     │
+│   1011 │   │   if app_name:                                                                                                                                                      │
+│   1012 │   │   │   try:                                                                                                                                                          │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────── locals ─────────────────────────────────────────────╮                                                                             │
+│ │      app = None                                                                                  │                                                                             │
+│ │ app_name = None                                                                                  │                                                                             │
+│ │  options = {}                                                                                    │                                                                             │
+│ │     self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x0000026646A9CB80> │                                                                             │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                             │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\commands\base.py:699 in finalize                                                                                                 │
+│                                                                                                                                                                                  │
+│    696 │   │   │   to finalize. By default, all apps will be finalized.                                                                                                          │
+│    697 │   │   """                                                                                                                                                               │
+│    698 │   │   self.verify_host()                                                                                                                                                │
+│ ❱  699 │   │   self.verify_tools()                                                                                                                                               │
+│    700 │   │                                                                                                                                                                     │
+│    701 │   │   apps = self.apps.values() if app is None else [app]                                                                                                               │
+│    702 │   │   for app in apps:                                                                                                                                                  │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────── locals ──────────────────────────────────────────────╮                                                                            │
+│ │       app = None                                                                                  │                                                                            │
+│ │      self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x0000026646A9CB80> │                                                                            │
+│ │ test_mode = False                                                                                 │                                                                            │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                            │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\platforms\android\gradle.py:146 in verify_tools                                                                                  │
+│                                                                                                                                                                                  │
+│   143 │   │   """Verify that the Android APK tools in `briefcase` will operate on this system,                                                                                   │
+│   144 │   │   downloading tools as needed."""                                                                                                                                    │
+│   145 │   │   super().verify_tools()                                                                                                                                             │
+│ ❱ 146 │   │   AndroidSDK.verify(tools=self.tools)                                                                                                                                │
+│   147 │   │   if not self.is_clone:                                                                                                                                              │
+│   148 │   │   │   self.console.add_log_file_extra(self.tools.android_sdk.list_packages)                                                                                          │
+│   149                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────── locals ───────────────────────────────────────────╮                                                                                 │
+│ │ self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x0000026646A9CB80> │                                                                                 │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                 │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\integrations\base.py:114 in verify                                                                                               │
+│                                                                                                                                                                                  │
+│   111 │   │   **kwargs,                                                                                                                                                          │
+│   112 │   ) -> ManagedToolT:                                                                                                                                                     │
+│   113 │   │   """Confirm the managed tool is installed and available."""                                                                                                         │
+│ ❱ 114 │   │   return super().verify(tools=tools, app=app, install=install, **kwargs)                                                                                             │
+│   115 │                                                                                                                                                                          │
+│   116 │   @abstractmethod                                                                                                                                                        │
+│   117 │   def exists(self) -> bool:                                                                                                                                              │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────── locals ────────────────────────────────────╮                                                                                               │
+│ │     app = None                                                                 │                                                                                               │
+│ │ install = True                                                                 │                                                                                               │
+│ │  kwargs = {}                                                                   │                                                                                               │
+│ │   tools = <briefcase.integrations.base.ToolCache object at 0x0000026646B59130> │                                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────╯                                                                                               │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\integrations\base.py:78 in verify                                                                                                │
+│                                                                                                                                                                                  │
+│    75 │   ) -> ToolT:                                                                          ╭─────────────────────────────────── locals ────────────────────────────────────╮ │
+│    76 │   │   """Confirm the tool is available and usable on the host platform."""             │    app = None                                                                 │ │
+│    77 │   │   cls.verify_host(tools=tools)                                                     │ kwargs = {'install': True}                                                    │ │
+│ ❱  78 │   │   tool = cls.verify_install(tools=tools, app=app, **kwargs)                        │  tools = <briefcase.integrations.base.ToolCache object at 0x0000026646B59130> │ │
+│    79 │   │   return tool                                                                      ╰───────────────────────────────────────────────────────────────────────────────╯ │
+│    80 │                                                                                                                                                                          │
+│    81 │   @classmethod                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\integrations\android_sdk.py:370 in verify_install                                                                                │
+│                                                                                                                                                                                  │
+│    367 │   │   │   │   │   │   "directory path in the ANDROID_HOME environment variable."                                                                                        │
+│    368 │   │   │   │   │   )                                                                                                                                                     │
+│    369 │   │   │   │   │   tools.console.info()                                                                                                                                  │
+│ ❱  370 │   │   │   │   sdk.install()                                                                                                                                             │
+│    371 │   │                                                                                                                                                                     │
+│    372 │   │   # Licences must be accepted to use the SDK                                                                                                                        │
+│    373 │   │   sdk.verify_license()                                                                                                                                              │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────── locals ───────────────────────────────────────────────╮                                                                          │
+│ │        install = True                                                                               │                                                                          │
+│ │         kwargs = {'app': None}                                                                      │                                                                          │
+│ │            sdk = <briefcase.integrations.android_sdk.AndroidSDK object at 0x0000026646B89B20>       │                                                                          │
+│ │   sdk_root_env = None                                                                               │                                                                          │
+│ │  sdk_root_path = WindowsPath('C:/Users/LU/AppData/Local/BeeWare/briefcase/Cache/tools/android_sdk') │                                                                          │
+│ │ sdk_source_env = None                                                                               │                                                                          │
+│ │          tools = <briefcase.integrations.base.ToolCache object at 0x0000026646B59130>               │                                                                          │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                          │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\integrations\android_sdk.py:402 in install                                                                                       │
+│                                                                                                                                                                                  │
+│    399 │                                                                                                                                                                         │
+│    400 │   def install(self):                                                                                                                                                    │
+│    401 │   │   """Download and install the Android SDK."""                                                                                                                       │
+│ ❱  402 │   │   cmdline_tools_zip_path = self.tools.file.download(                                                                                                                │
+│    403 │   │   │   url=self.cmdline_tools_url,                                                                                                                                   │
+│    404 │   │   │   download_path=self.tools.base_path,                                                                                                                           │
+│    405 │   │   │   role="Android SDK Command-Line Tools",                                                                                                                        │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────── locals ───────────────────────────────────────╮                                                                                          │
+│ │ self = <briefcase.integrations.android_sdk.AndroidSDK object at 0x0000026646B89B20> │                                                                                          │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────╯                                                                                          │
+│                                                                                                                                                                                  │
+│ E:\wechatauto\.venv\lib\site-packages\briefcase\integrations\file.py:284 in download                                                                                             │
+│                                                                                                                                                                                  │
+│   281 │   │   │   │   │   f"The reported cause of the problem was {e}"                                                                                                           │
+│   282 │   │   │   │   )                                                                                                                                                          │
+│   283 │   │   │                                                                                                                                                                  │
+│ ❱ 284 │   │   │   raise NetworkFailure(                                                                                                                                          │
+│   285 │   │   │   │   f"download {description}",                                                                                                                                 │
+│   286 │   │   │   │   hint,                                                                                                                                                      │
+│   287 │   │   │   ) from e                                                                                                                                                       │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────── locals ───────────────────────────────────────────────╮                                                                         │
+│ │   description = 'Android SDK Command-Line Tools'                                                     │                                                                         │
+│ │ download_path = WindowsPath('C:/Users/LU/AppData/Local/BeeWare/briefcase/Cache/tools')               │                                                                         │
+│ │      filename = None                                                                                 │                                                                         │
+│ │          hint = 'is your computer offline?\n\nThe reported cause of the problem was timed out'       │                                                                         │
+│ │          role = 'Android SDK Command-Line Tools'                                                     │                                                                         │
+│ │          self = <briefcase.integrations.file.File object at 0x0000026646ADD9A0>                      │                                                                         │
+│ │           url = 'https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zi'+1 │                                                                         │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+NetworkFailure: Unable to download Android SDK Command-Line Tools; is your computer offline?
+
+The reported cause of the problem was timed out

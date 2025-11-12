@@ -1,0 +1,40 @@
+[build-system]
+requires = [
+    "briefcase>=0.3.0",
+    "toga-android>=0.3.0",
+]
+build-backend = "briefcase.backends"
+
+[tool.briefcase]
+project_name = "WeChat Auto"
+bundle = "com.github.wechatauto"
+version = "1.0.0"
+url = "https://github.com/YOUR_USERNAME/wechat-auto"
+license = "MIT"
+author = "GitHub Actions"
+author_email = "actions@github.com"
+
+[tool.briefcase.app.wechatauto]
+formal_name = "WeChat Auto"
+description = "微信消息自动化助手 - 通过GitHub Actions构建"
+sources = ["src/wechatauto"]
+requires = [
+    "toga>=0.3.0",
+]
+
+# Android配置
+[tool.briefcase.app.wechatauto.android]
+permissions = [
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+]
+
+# 其他平台配置（用于本地测试）
+[tool.briefcase.app.wechatauto.linux]
+requires = ["toga-gtk>=0.3.0"]
+
+[tool.briefcase.app.wechatauto.windows]
+requires = ["toga-winforms>=0.3.0"]
+
+[tool.briefcase.app.wechatauto.macos]
+requires = ["toga-cocoa>=0.3.0"]
