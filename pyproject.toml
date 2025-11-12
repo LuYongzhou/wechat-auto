@@ -3,6 +3,7 @@ requires = [
     "briefcase>=0.3.0",
     "toga-android>=0.3.0",
     "toga-core>=0.3.0",
+    "uiautomator2>=0.2.0",
 ]
 build-backend = "briefcase.backends"
 
